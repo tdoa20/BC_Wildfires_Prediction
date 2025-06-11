@@ -1,8 +1,7 @@
-# BC Wildfires Prediction
-The goal of the project is to create a preliminary model to predict wildfire risk that can be further expanded and improved by other researchers. Such a model can 
-help mitigate wildfire risk in the future. Authorities can potentially use these predictive models to readjust their spending to avoid property loss and damage from the fires, plan resources in advance, and locate equipment appropriately to respond quickly.
-## Background and Overview
+# BC Wildfire Predictive Model
 
+## Background and Overview
+In recent decades, wildfires have caused widespread environmental damage, economic loss, and displacement of communities across many regions, including British Columbia. To prevent and mitigate the impacts of wildfires, many valuable studies have been conducted in the past.The goal of this project is to develop a predictive model that estimates wildfire risk using historical data. By analyzing patterns in past wildfires, weather conditions, and other environmental factors, the model aims to identify areas at higher risk.
 ## Data Structure Overview
 
 ## Executive Summary
