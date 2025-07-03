@@ -23,17 +23,22 @@ points were generated to represent locations without fires which were classified
 Here are the list of variables:
 - *2-metre temperature (K)*. The air temperature 2 meters above ground level. High temperatures dry out vegetation, making it more flammable and increasing fire risk.
 – *2-metre dewpoint temperature (K)*. The temperature at which air becomes saturated with moisture (dewpoint). Lower dewpoints indicate drier air, which helps vegetation dry out and become more ignitable.
-- *10 U & 10 V wind (m)*. This is a measure of the fire spread direction & speed. It is divided into East-west (V) and north-south (U) wind components measured at a height of 10 meters. Wind drives fire to spread, oxygen supply, and can carry embers over long distances.
+- *10 U & 10 V wind (m)*. This is a measure of the fire spread direction & speed. It is divided into East-west (V) and north-south (U) wind components measured at a height of 10 meters. Wind drives fire to spread, oxygen supply, and can carry embers over long distances. These components were used to derive the windspeed.
 - *Total Precipitation (m)*. Average Total rainfall. Lack of rain leads to dry conditions and fuel buildup, increasing fire potential.
 - *Fuel type*. The type of vegetation or material that can burn on the ground. Different fuels ignite and burn at different rates, affecting how a fire spreads.
 - *Leaf Area Index*. The amount of leaf coverage per unit area, representing vegetation. A higher LAI means more available fuel and more intense, longer-lasting fires. 
 
 ## Executive Summary
 ### Overview of Findings
-Out of all models, it was discovered that the random forest model was the most accurate. It had a high sensitivity, but a lower precision and accuracy. This highlights the increased ability to detect fires, but its potential to predict certain fires that are not present.
+Out of all models, it was discovered that the random forest model was the most accurate. It had a high sensitivity, but a lower precision and accuracy. This highlights the increased ability to detect fires, but its potential to predict certain fires that are not present. The temperature (dewpoint and 2-metre temperature) and precipitation were the 3 most important. 
 
-Out of all the features observed in the random forest model, the temperature (dewpoint and 2-metre temperature) and precipitation were the 3 most important. Based on partial independence plots, increases the 2-metre temperature corresponded to increases in the average fire probability, but increases in the 2-metre dewpoint temperature and total 
-precipitation generally had the opposite effect on the average fire probability.
+<img src="https://github.com/tdoa20/BC_Wildfires_Prediction/blob/b742e31bf7edbab432ce6bd2f61ec5db87a076fe/Screenshot%202025-07-02%20193456.png" width="520" height="200">
+Based on the partial independence plots below, increases in the 2-metre temperature corresponded to increases in the average fire probability, but increases in the 2-metre dewpoint temperature and total precipitation generally had the opposite effect on the average fire probability.
+<p>
+  <img src="https://github.com/tdoa20/BC_Wildfires_Prediction/blob/b742e31bf7edbab432ce6bd2f61ec5db87a076fe/2m_temp_RF_Plot.png" width="320" height="275">
+  <img src="https://github.com/tdoa20/BC_Wildfires_Prediction/blob/b742e31bf7edbab432ce6bd2f61ec5db87a076fe/2m_dewpoint_temp_RF_plot.png" width="320" height="275">
+  <img src="https://github.com/tdoa20/BC_Wildfires_Prediction/blob/b742e31bf7edbab432ce6bd2f61ec5db87a076fe/Total_Precipitation_RF_Plot.png" width="320" height="275">
+</p>
 
 ## Recommendations
 These models can be used to make forecasts based on the initial data points and then monitor certain areas that have a higher risk of fires. It is important to monitor the 2-meter temperature, 2-metre dewpoint temperature, and total precipitation values daily to detect areas with higher risks of fires. Through this, wildfire services and local utilities are able to adjust their operations and implement different strategies proactively to lower the impact of wildfires on the environment and consequently the property damages.
