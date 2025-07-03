@@ -22,48 +22,21 @@ points were generated to represent locations without fires which were classified
 
 Here are the list of variables:
 - *2-metre temperature (K)*. The air temperature 2 meters above ground level. High temperatures dry out vegetation, making it more flammable and increasing fire risk.
-d2m – dewpoint 
-temperature (K) 
-Temperature at which air 
-becomes saturated with 
-moisture (dewpoint) 
-Lower dewpoints 
-indicate drier air, which 
-helps vegetation dry out 
-and become more 
-ignitable 
-10 U & 10 V wind (m) East-west and north
-south wind components 
-measured at 10 meters 
-height 
-Wind drives fire to 
-spread, oxygen supply, 
-and can carry embers 
-over long distances 
-Tp - Total Precipitation 
-(m) 
-Total rainfall  Lack of rain leads to dry 
-conditions and fuel 
-buildup, increasing fire 
-potential 
-Fuel type The type of vegetation or 
-material that can burn 
-on the ground 
-Different fuels ignite and 
-burn at different rates, 
-affecting how a fire 
-spread 
-Leaf Area Index (lai_hv) Amount of leaf coverage 
-per unit area, 
-representing vegetation 
-Higher LAI means more 
-available fuel and more 
-intense, longer-lasting 
-density 
-Analysis 
-f
- ires
+– *2-metre dewpoint temperature (K)*. The temperature at which air becomes saturated with moisture (dewpoint). Lower dewpoints indicate drier air, which helps vegetation dry out and become more ignitable.
+- *10 U & 10 V wind (m)*. This is a measure of the fire spread direction & speed. It is divided into East-west (V) and north-south (U) wind components measured at a height of 10 meters. Wind drives fire to spread, oxygen supply, and can carry embers over long distances.
+- *Total Precipitation (m)*. Average Total rainfall. Lack of rain leads to dry conditions and fuel buildup, increasing fire potential.
+- *Fuel type*. The type of vegetation or material that can burn on the ground. Different fuels ignite and burn at different rates, affecting how a fire spreads.
+- *Leaf Area Index*. The amount of leaf coverage per unit area, representing vegetation. A higher LAI means more available fuel and more intense, longer-lasting fires. 
+
 ## Executive Summary
+### Overview of Findings
+Out of all models, it was discovered that the random forest model was the most accurate. It had a high sensitivity, but a lower precision and accuracy. This highlights the increased ability to detect fires, but its potential to predict certain fires that are not present.
+
+Out of all the features observed in the random forest model, the temperature (dewpoint and 2-metre temperature) and precipitation were the 3 most important. Based on partial independence plots, increases the 2-metre temperature corresponded to increases in the average fire probability, but increases in the 2-metre dewpoint temperature and total 
+precipitation generally had the opposite effect on the average fire probability.
+
+## Recommendations
+These models can be used to make forecasts based on the initial data points and then monitor certain areas that have a higher risk of fires. It is important to monitor the 2-meter temperature, 2-metre dewpoint temperature, and total precipitation values daily to detect areas with higher risks of fires. Through this, wildfire services and local utilities are able to adjust their operations and implement different strategies proactively to lower the impact of wildfires on the environment and consequently the property damages.
 
 ## Insights
 
