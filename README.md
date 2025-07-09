@@ -17,8 +17,11 @@ characteristics that were classified into different types. As a result, the cond
 -  *ERA5 Monthly Data*. This dataset contains the average monthly climate data in the form of spatial layers.
 
 ## Data Transformation Overview
-Through  PyGIS, the locations of each BC fire hotspot were extracted, then grouped by month and year. These points were given a ‘Fire’ label of 1. Random generated 
-points were generated to represent locations without fires which were classified by the ‘Fire’ label of 0. To ensure appropriate sampling, the number of randomly generated points was made to be equal to the number of fire hotspots that month. On months without fires, they were based on the monthly average number of fire hotspots in that year. The climate data was clipped to BC along with the fuel type data to make separate layers. Each point was sampled, quantifying the climate characteristics and fuel type of each point based on its location. These values along with the latitudes and longitudes of each point were combined to make a comma-separated file which was used for modeling.
+Through  PyGIS, the locations of each BC fire hotspot were extracted, then grouped by month and year. These points were given a ‘Fire’ label of 1. Random generated points were generated to represent locations without fires which were classified by the ‘Fire’ label of 0. To ensure appropriate sampling, the number of randomly generated points was made to be equal to the number of fire hotspots that month. On months without fires, they were based on the monthly average number of fire hotspots in that year. The climate data was clipped to BC along with the fuel type data to make separate layers. Each point was sampled, quantifying the climate characteristics and fuel type of each point based on its location. These values along with the latitudes and longitudes of each point were combined to make a comma-separated file which was used for modeling.
+
+The climate data cleaning script can be found here.
+
+The point data cleaning script can be found here.
 
 Here are the list of variables:
 - *2-metre temperature (K)*. The air temperature 2 meters above ground level. High temperatures dry out vegetation, making it more flammable and increasing fire risk.
